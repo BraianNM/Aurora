@@ -1,0 +1,211 @@
+/* ==========================================================================
+   ESTILOS GENERALES Y TEMÁTICA AURORA (Blanco, Negro y Dorado)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding-top: 80px; /* Espacio para que el menú fijo no tape el contenido */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor centralizado y elegante */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==========================================================================
+   MENÚ DESPLEGABLE FIJO (Arriba a la izquierda)
+   ========================================================================== */
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #d4af37; /* Línea dorada sutil */
+    padding: 15px 25px;
+    z-index: 1000;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background-color: #1a1a1a;
+    color: #d4af37; /* Dorado */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #d4af37;
+    color: #1a1a1a;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+    border: 1px solid #d4af37;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    color: #1a1a1a;
+    padding: 12px 16px;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid #f4f4f4;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #fcf8e3;
+    color: #b5942b;
+    padding-left: 22px; /* Efecto sutil de desplazamiento */
+}
+
+/* Mostrar menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==========================================================================
+   ELEMENTOS DE DISEÑO (Logo, Imágenes, Secciones)
+   ========================================================================== */
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-aurora {
+    max-width: 250px;
+    height: auto;
+}
+
+.gallery-placeholder {
+    display: block;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.gallery-placeholder img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+/* Tipografía de las bases de Aurora */
+.content-text h1 {
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+}
+
+.content-text h2 {
+    font-size: 22px;
+    color: #b5942b; /* Tono dorado elegante para subtítulos */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0e0b0;
+    padding-bottom: 5px;
+}
+
+.content-text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.content-text ul, .content-text ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.content-text li {
+    margin-bottom: 8px;
+}
+
+/* Estilo para páginas de contacto / formularios */
+.card-message {
+    border: 1px solid #d4af37;
+    padding: 35px;
+    background-color: #fffdf9;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-contacto {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #d4af37;
+    padding: 12px 25px;
+    margin: 15px 5px;
+    font-weight: bold;
+    border: 1px solid #d4af37;
+    transition: all 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #d4af37;
+    color: #1a1a1a;
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================================== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
