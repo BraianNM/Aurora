@@ -88,10 +88,9 @@ a {
 .dropdown-content a:hover {
     background-color: #fcf8e3;
     color: #b5942b;
-    padding-left: 22px; /* Efecto sutil de desplazamiento */
+    padding-left: 22px;
 }
 
-/* Mostrar menú al pasar el mouse */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -106,6 +105,7 @@ a {
 
 .logo-aurora {
     max-width: 250px;
+    width: 100%;
     height: auto;
 }
 
@@ -134,7 +134,7 @@ a {
 
 .content-text h2 {
     font-size: 22px;
-    color: #b5942b; /* Tono dorado elegante para subtítulos */
+    color: #b5942b;
     margin-top: 30px;
     margin-bottom: 15px;
     border-bottom: 1px solid #f0e0b0;
@@ -157,7 +157,6 @@ a {
     margin-bottom: 8px;
 }
 
-/* Estilo para páginas de contacto / formularios */
 .card-message {
     border: 1px solid #d4af37;
     padding: 35px;
@@ -184,20 +183,58 @@ a {
 }
 
 /* ==========================================================================
-   BOTÓN FLOTANTE DE WHATSAPP
+   SECCIÓN DE VIDEOS (PROYECTOS) RESPONSIVA
+   ========================================================================== */
+.video-item {
+    margin-bottom: 50px;
+    background: #ffffff;
+    border: 1px solid #e2d199;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.video-item h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    border-left: 4px solid #d4af37;
+    padding-left: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenedor para mantener proporción 16:9 en cualquier pantalla (PC y Móvil) */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ==========================================================================
+   BOTÓN FLOTANTE DE WHATSAPP (CORREGIDO)
    ========================================================================== */
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 30px;
+    right: 30px;
     background-color: #25d366;
     color: #fff;
     border-radius: 50px;
     text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -205,7 +242,30 @@ a {
     transition: transform 0.3s;
 }
 
+.whatsapp-float i {
+    font-size: 32px; 
+}
+
 .whatsapp-float:hover {
     transform: scale(1.1);
     color: #fff;
+}
+
+/* Ajustes para pantallas chicas (Móviles) */
+@media (max-width: 600px) {
+    body {
+        padding-top: 70px;
+    }
+    .container {
+        padding: 20px 15px;
+    }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-float i {
+        font-size: 26px;
+    }
 }
