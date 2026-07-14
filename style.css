@@ -88,7 +88,7 @@ a {
 .dropdown-content a:hover {
     background-color: #fcf8e3;
     color: #b5942b;
-    padding-left: 22px; /* Efecto de desplazamiento elegante */
+    padding-left: 22px; /* Efecto de desplazamiento sutil */
 }
 
 .dropdown:hover .dropdown-content {
@@ -134,7 +134,7 @@ a {
 
 .content-text h2 {
     font-size: 22px;
-    color: #b5942b; /* Tono dorado elegante para subtítulos */
+    color: #b5942b; /* Dorado elegante */
     margin-top: 30px;
     margin-bottom: 15px;
     border-bottom: 1px solid #f0e0b0;
@@ -157,7 +157,7 @@ a {
     margin-bottom: 8px;
 }
 
-/* Estilo para páginas de contacto / mensajes */
+/* Estilo para tarjetas de contacto y mensajes */
 .card-message {
     border: 1px solid #d4af37;
     padding: 35px;
@@ -184,15 +184,15 @@ a {
 }
 
 /* ==========================================================================
-   SECCIÓN DE VIDEOS (PROYECTOS) - ESTILO CINE PREMIUM (CORREGIDO)
+   SECCIÓN DE VIDEOS (PROYECTOS) - RESPONSIVA FLUIDA (CORREGIDA)
    ========================================================================== */
 .video-item {
     margin-bottom: 45px;
     background: #ffffff;
-    border: 1px solid #e2d199; /* Borde dorado Aurora */
+    border: 1px solid #e2d199;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 .video-item h3 {
@@ -205,48 +205,30 @@ a {
     letter-spacing: 1px;
 }
 
-/* Contenedor que recorta inteligentemente el banner superior de Google Drive */
-.video-wrapper-iframe {
+/* Contenedor perfecto con relación de aspecto 16:9 sin desfasarse */
+.video-wrapper {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Proporción 16:9 clásica */
+    padding-bottom: 56.25%; /* Relación de aspecto Cine/TV */
     height: 0;
-    overflow: hidden;
-    background-color: #000;
+    background-color: #000000;
     border-radius: 4px;
+    overflow: hidden;
 }
 
-.video-wrapper-iframe iframe {
+.video-wrapper video,
+.video-wrapper iframe {
     position: absolute;
-    /* Movemos el iframe ligeramente hacia arriba para ocultar la barra negra de Drive */
-    top: -40px; 
+    top: 0;
     left: 0;
     width: 100%;
-    /* Compensamos la altura para que no se corte el video abajo */
-    height: calc(100% + 80px); 
-    border: none;
-}
-
-
-/* Contenedor del reproductor nativo */
-.video-wrapper {
-    width: 100%;
-    background-color: #000000; /* Fondo negro detrás de los bordes del video */
-    border-radius: 4px;
-    overflow: hidden;
-    line-height: 0; /* Elimina espacios vacíos molestos abajo del reproductor */
-}
-
-.video-wrapper video {
-    width: 100%;
-    height: auto;
-    max-height: 500px; /* Evita que crezca desproporcionadamente en pantallas gigantes */
-    outline: none;
-    display: block;
+    height: 100%;
+    border: 0;
+    object-fit: contain; /* Evita que el video se estire o se corte mal */
 }
 
 /* ==========================================================================
-   BOTÓN FLOTANTE DE WHATSAPP (CORREGIDO)
+   BOTÓN FLOTANTE DE WHATSAPP
    ========================================================================== */
 .whatsapp-float {
     position: fixed;
@@ -266,7 +248,6 @@ a {
     transition: transform 0.3s;
 }
 
-/* Estilo para el ícono de Font Awesome */
 .whatsapp-float i {
     font-size: 32px; 
 }
@@ -277,17 +258,17 @@ a {
 }
 
 /* ==========================================================================
-   DISEÑO RESPONSIVO (Ajustes para celulares)
+   DISEÑO RESPONSIVO (Ajustes finos para celulares)
    ========================================================================== */
 @media (max-width: 600px) {
     body {
-        padding-top: 70px;
+        padding-top: 75px;
     }
     .container {
         padding: 20px 15px;
     }
     .video-item {
-        padding: 10px;
+        padding: 12px;
         margin-bottom: 30px;
     }
     .whatsapp-float {
